@@ -1,0 +1,18 @@
+{
+  "name": "nature-of-code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AdamDavisDeveloper/nature-of-code.git",
+  "author": "AdamDavisDeveloper <adavisdeveloper@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "scripts": {
+    "dev": "http-server public -c-1 -p 5173"
+  },
+  "dependencies": {
+    "@types/p5": "^1.7.6",
+    "p5": "^2.0.4"
+  }
+}
