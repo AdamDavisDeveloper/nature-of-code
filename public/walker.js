@@ -18,6 +18,19 @@ function randCoord() { // number[]
   return [x, y];
 }
 
+class Walker {
+  constructor({offsetX, offsetY}) {
+    this.x = (width / 2) - offsetX;
+    this.y = (height / 2) - offsetY;
+  }
+
+  drawWalker() {
+    noStroke();
+    fill(255);
+    circle(positionX, positionY, 1);
+  }
+}
+
 function setup() {
   createCanvas(900, 800);
   background(20);
@@ -27,6 +40,17 @@ function setup() {
 
   wallyX = (width / 2) - 250;
   wallyY = (height / 2) - 150;
+
+  // Tracking Coords
+  wilburLabel = createDiv('');
+  wilburLabel.style('color', 'white');
+  wilburLabel.style('font-family', 'monospace');
+  wilburLabel.position(10, 10);
+
+  wallyLabel = createDiv('');
+  wallyLabel.style('color', 'rgb(255, 192, 203)');
+  wallyLabel.style('font-family', 'monospace');
+  wallyLabel.position(10, 25);
 };
 
 function draw() {
@@ -39,11 +63,11 @@ function draw() {
   const newWallyX = wallyNewCoords[0];
   const newWallyY = wallyNewCoords[1];
 
+  noStroke();
   fill(255);
   circle(positionX, positionY, 1);
 
   fill(255, 192, 203);
-  noStroke();
   circle(wallyX, wallyY, 1);
 
 
@@ -57,4 +81,7 @@ function draw() {
   positionY += newY;
   wallyX += newWallyX;
   wallyY += newWallyY;
+
+  wilburLabel.html(`WILBUR: (${positionX}, ${positionY})`);
+  wallyLabel.html(`WALLY: (${wallyX}, ${wallyY})`);
 };
