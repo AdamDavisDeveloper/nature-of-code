@@ -19,15 +19,24 @@ function randCoord() { // number[]
 }
 
 class Walker {
-  constructor({offsetX, offsetY}) {
-    this.x = (width / 2) - offsetX;
-    this.y = (height / 2) - offsetY;
+  constructor(config: {offsetX, offsetY, colorRGB}) {
+    this.x = (width / 2) - config.offsetX;
+    this.y = (height / 2) - config.offsetY;
   }
 
   drawWalker() {
     noStroke();
-    fill(255);
-    circle(positionX, positionY, 1);
+    fill(config.colorRGB);
+    circle(this.x, this.y, 1);
+  }
+
+  step() {
+    const newCoords = randCoord();
+    const newX = newCoords[0];
+    const newY = newCoords[1];
+
+    this.x += newX;
+    this.y += newY;
   }
 }
 
