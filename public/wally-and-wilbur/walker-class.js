@@ -2,7 +2,7 @@ let wally;
 let wilbur;
 
 const wallyConfig = {
-  offsetX: 250,
+  offsetX: 50,
   offsetY: 150,
   colorRGB: {
     r: 255,
@@ -13,7 +13,7 @@ const wallyConfig = {
 
 const wilburConfig = {
   offsetX: 0,
-  offsetY: 0,
+  offsetY: -100,
   colorRGB: {
     r: 255,
     g: 255,
