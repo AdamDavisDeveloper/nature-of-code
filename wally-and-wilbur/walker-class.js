@@ -95,5 +95,5 @@ function draw() {
 
   // Display Position Labels
   wilburLabel.html(`WILBUR: (${wilbur.x}, ${wilbur.y})`);
-  wallyLabel.html(`WALLY: (${wally.x}, ${wally.y})`);
+  wallyLabel.html(`WALLY : (${wally.x}, ${wally.y})`);
 };
