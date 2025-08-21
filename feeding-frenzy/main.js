@@ -135,10 +135,8 @@ class Walker {
   }
 
   eat() {
-    if(isFoodLocation(this.x, this.y)) {
-      removeFood(this.x, this.y);
-      hunger += foodSize + 10;
-    }
+    removeFood(this.x, this.y);
+    this.hunger += foodSize + 10;
   }
 
   clearTrail() {
@@ -160,6 +158,10 @@ class Walker {
 
   step() {
     if (!this.isAlive) return;
+
+    if(isFoodLocation(this.x, this.y)) {
+      this.eat();
+    }
     const [dx, dy] = randCoord();
     this.handleEnergyAndHunger();
     this.x += dx;
