@@ -37,7 +37,11 @@ a {
 }
 
 #TOC h1 {
-  margin-bottom: .15rem;
+  margin-bottom: 0; 
+}
+
+#TOC a {
+  margin-bottom: 1rem;
 }
 
 #TitleSub {
