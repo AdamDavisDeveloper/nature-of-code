@@ -61,7 +61,7 @@ class Walker {
 }
 
 function setup() {
-  createCanvas(900, 800);
+  createCanvas(windowWidth, windowHeight);
   background(20);
 
   // Wally Walker Setup
