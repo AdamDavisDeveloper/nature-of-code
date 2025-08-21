@@ -35,6 +35,12 @@ function randCoord() { // number[]
   return [x, y];
 }
 
+class FoodDropper {
+  constructor() {
+
+  }
+}
+
 class Walker {
   constructor(config) {
     this.x = (width / 2) - config.offsetX;

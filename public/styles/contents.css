@@ -1,4 +1,21 @@
+@font-face {
+  font-family: "GohuFont Nerd Font";
+  src:
+    local("GohuFont 14 Nerd Font"),
+    url("../fonts/GohuFont14.ttf") format("truetype")
+}
 
+html {
+  font-family: "GohuFont Nerd Font";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: black;
+}
+
+a {
+  color: rgb(255, 192, 203);
+}
 
 #CenterList {
   color: rgb(255, 180, 90);
@@ -12,4 +29,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 4rem;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+#TOC h1 {
+  margin-bottom: .15rem;
+}
+
+#TitleSub {
+  margin-bottom: 1.25rem;
 }
